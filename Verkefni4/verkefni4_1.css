@@ -1,0 +1,103 @@
+* {
+    box-sizing:border-box;
+}
+@media screen and (min-width: 0em) and (max-width: 37.5em) {
+.col-2 {
+display:grid;
+grid-template-columns: 1fr;
+}
+.col-3 {
+display:grid;
+grid-template-columns:1fr;
+}
+.col-4 {
+display:grid;
+grid-template-columns:1fr;
+}
+}
+
+@media screen and (min-width: 37.5em) and (max-width: 48em) {
+.einn {
+    grid-area: einn;
+}
+.tveir {
+    grid-area: tveir;
+}
+.thrir {
+    grid-area: thrir;
+}
+.col-2 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns: 1fr 1fr;
+}
+.col-3 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns:1fr 1fr;
+grid-template-areas: "einn tveir"
+                     "thrir thrir";
+}
+.col-4 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media screen and (min-width: 48em) and (max-width: 60em) {
+.col-2 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns: 1fr 1fr;
+}
+.col-3 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns:1fr 1fr 1fr;
+}
+.col-4 {
+display:grid;
+grid-gap: 10px;
+grid-template-columns:1fr 1fr 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 60em) {
+html {
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+}
+.col-2 {
+display:grid;
+align-items:center;
+grid-template-columns: auto auto;
+grid-gap: 40px;
+padding-left: 2%;
+padding-right: 2%;
+align-items: center;
+margin:auto;
+}
+.col-3 {
+display:grid;
+align-items:center;
+grid-template-columns:auto auto auto;
+grid-gap: 40px;
+padding-left: 2%;
+padding-right: 2%;
+align-items: center;
+margin:auto;
+}
+.col-4 {
+display:grid;
+align-items:center;
+grid-template-columns:auto auto auto auto;
+grid-gap: 40px;
+padding-left: 2%;
+padding-right: 2%;
+align-items: center;
+margin:auto;
+}
+}
+                        

@@ -1,0 +1,144 @@
+*{margin: auto; padding: auto;}
+html {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+body{
+    margin:0;
+    padding:0;
+    background: rgb(36,0,22);
+    background: linear-gradient(to bottom, rgb(36,0,22) 0%, rgb(230,19,161) 50%, rgb(255,138,199) 90%, rgb(255, 255, 255) 100%);
+    background-repeat: no-repeat;
+
+}
+img {
+    max-width: 100%;
+    height:auto;
+}
+picture{
+    font-size: 0%;
+}
+.album {
+    display:grid;
+    grid-gap:5%;
+}
+h3 {
+    margin:auto;
+    padding:0;
+}
+div.fannartrans {
+    padding:2%;
+}
+div.fannartrans img{
+    border:0.2em black solid;
+}
+div p {
+    font-family:'Calibri';
+    padding:5%;
+}
+@media screen and (min-width: 0em) and (max-width: 30em) {
+h1 {
+    text-align: center;
+    font-size:56px;
+    font-family:"Comic Sans MS";
+}
+h3 {
+    font-size:30px;
+    font-family:"Papyrus";
+    display:none;
+}
+.album {
+    grid-gap:2%;
+    padding:5%;
+}
+picture.album img{
+    border: 2px black solid;
+    box-shadow: 10px 10px 20px black;
+}
+}
+@media screen and (min-width: 30em) and (max-width: 48em) {
+h1 {
+    text-align: center;
+    font-size:80px;
+    font-family:"Comic Sans MS";
+}
+h3 {
+    font-size:50px;
+    font-family:"Papyrus";
+    display:none;
+}
+.album {
+    grid-gap:2%;
+    padding:5%;
+}
+picture.album img{
+    border: 2px black solid;
+    box-shadow: 10px 10px 20px black;
+}
+}
+@media screen and (min-width: 48em) and (max-width: 80em) {
+h1 {
+    text-align: center;
+    font-size:100px;
+    font-family:"Comic Sans MS";
+
+} 
+h3 {
+    font-size:50px;
+    font-family:"Papyrus";
+}
+.transgrid{
+    display:grid;
+    padding:auto;
+    margin:auto;
+    grid-template-columns:1fr 1fr;
+    grid-gap:5%;
+    width:70%;
+    justify-content: center;
+    text-align:left;
+}
+.album {
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    margin:auto;
+    padding:5%;
+    padding-bottom: 12%;
+}
+picture.album img{
+    border: 2px black solid;
+    box-shadow: 10px 10px 20px black;
+}
+}
+@media screen and (min-width: 80em){
+h1 {
+    text-align: center;
+    font-size:150px;
+    font-family:"Comic Sans MS";
+}
+h3 {
+    font-size:90px;
+    font-family:"Papyrus";
+}
+.transgrid{
+    display:grid;
+    padding:auto;
+    margin:auto;
+    grid-template-columns:1fr 1fr;
+    grid-gap:5%;
+    width:70%;
+    justify-content: center;
+    text-align:left;
+}
+.album {
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    margin:auto;
+    padding:5%;
+    padding-bottom: 12%;
+}
+picture.album img{
+    border: 2px black solid;
+    box-shadow: 10px 10px 20px black;
+}
+}

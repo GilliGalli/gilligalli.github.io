@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: lime;
+}
+.header {
+display: grid;
+grid-column: auto;
+font-family:"Wingdings";
+color: olive;
+border: 1px solid black;
+padding: 2%;
+text-align:center;
+float:left;
+}
+a:link {
+    color:peru;
+}
+a:visited {
+    color:orangered;
+}
+a:hover {
+    color:black;
+    background-color:red;
+}
+a:active {
+    color:#000000
+}
+.topnav {
+font-family: "Georgia";
+border: 1px solid black;
+float:left
+}
+.topmenu {
+display: grid;
+list-style-type: none;
+text-align:center;
+grid-template-columns: 43% 100px;
+}
+.main {
+display:grid;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+grid-template-columns: 70% 30%;
+border: 1px gold solid;
+border-top: 0;
+}
+.art1 {
+border: 1px salmon solid;
+grid-area: 2 / 1 / 2 / 1;
+padding: 2%;
+padding-left: 3%;
+}
+.art2 {
+grid-area: 2 / 1 / 1 / 2;
+border: 1px brown solid;
+padding: 2%;
+}
+.as1 {
+border: 1px cyan solid;
+padding: 2%;
+padding-left: 3%;
+}
+.as2 {
+border: 1px magenta solid;
+grid-area: 2 / 2 / 2 / 2;
+padding: 2%;
+}
+.footer {
+    display: grid;
+padding: 2%;
+grid-template-columns: 123px 30% auto;
+border: 1px orangered solid;
+text-align: center;
+}
