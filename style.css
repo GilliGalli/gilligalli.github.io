@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap');
+/* til þess að útskýra þessar leturgerðir, þá líkaði mér bara við þær
+eiginlega ekkert meira en bara það sko*/
 html {
     width: 100%;
     margin:0;
     padding:0;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgb(0, 255, 255) 0%, rgb(0, 255, 255) 59%, rgba(226, 0, 107) 60%);
+    background: linear-gradient(180deg, rgb(0, 255, 255) 0%, rgb(0, 255, 255) 59%, rgba(226, 0, 107) 60%, rgba(226, 0, 107) 95%, rgb(0, 96, 193) 96%);
 }
 body{
     padding:0;
@@ -17,13 +19,27 @@ h1 {
     font-size: 300%;
     padding-bottom:45vh;
 }
+#efnisyfirlit{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display:grid;
+    text-align: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background:rgb(255,255,255);
+    background:linear-gradient(180deg, rgb(58, 58, 58)0%, rgb(0, 0, 0)100%)
+}
 footer ul {
     display:grid;
     list-style: none;
     text-align: center;
     justify-content: center;
     grid-column-gap: 5%;
-    width:55%;
+    width:100%;
     margin:auto;
     list-style: none;
     grid-template-rows:auto auto auto auto;
@@ -31,32 +47,57 @@ footer ul {
     font-family: 'Poppins', sans-serif;
 }
 footer {
+    display:grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgb(0, 96, 193) 80%);
-    margin:0;
+    margin:auto;
     padding:0;
-    padding-top:50%;
+    grid-gap:15%;
+    padding-top:20%;
     padding-bottom:5%;
 }
 #articles{
     width:100%;
-    padding-top: 10%;
-    padding-bottom: 20%;
+    padding-top: 7%;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(241,44,44,1) 0%, rgba(226,0,107,1) 100%);
+    background: linear-gradient(180deg, rgba(241,44,44,1) 0%, rgba(226,0,107,1) 50%);
+}
+#map {
+    display:block;
+}
+#beatsabercontainer div{
+    grid-area: "bstext";
+}
+#beatsabercontainer video{
+    grid-area: "bsvideo";
 }
 #beatsabercontainer {
     display:grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
     width:60%;
+    justify-items: center;
+    height:auto;
+    margin:auto;
+    grid-gap:25%;
+    padding-top: 3%;
+    grid-row-gap: 1%;
+}
+#dizzeerascal {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    width:60%;
+    padding-top:5%;
     justify-items: center;
     align-items: center;
     height:auto;
     margin:auto;
-    grid-gap:25%;
+    grid-gap:5%;
 }
 video{
+    display:block;
     width:200%;
     max-height: 100%;
 }
@@ -69,15 +110,30 @@ a:hover {
     text-decoration: underline;
 }
 @media screen and (max-width:48em){
+#efnisyfirlit{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 footer {
     padding-top:30%;
 }
 #beatsabercontainer{
+    grid-template-rows: auto auto;
+    grid-gap: 2%;
+}
+audio{
+    width:90%;
+}
+#dizzeerascal{
+    padding-top:10%;
     grid-template-columns: auto;
     grid-gap: 2%;
 }
 footer ul {
     grid-template-rows: auto auto auto auto auto auto auto auto;
     width:75%;
+}
+video{
+    width:90%;
 }
 }
