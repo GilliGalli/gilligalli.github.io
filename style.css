@@ -46,7 +46,7 @@ footer ul {
     grid-template-rows:auto auto auto auto;
     grid-auto-flow:column;
     font-family: 'Poppins', sans-serif;
-    padding-bottom:6%;
+    padding-bottom:2%;
 }
 footer {
     justify-content: center;
@@ -55,7 +55,7 @@ footer {
     margin:auto;
     padding:0;
     padding-top:20%;
-    padding-bottom:6%;
+    padding-bottom:2%;
 }
 footer p {
     color:white;
