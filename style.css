@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&family=Raleway&family=Readex+Pro:wght@300&display=swap');
 /* til þess að útskýra þessar leturgerðir, þá líkaði mér bara við þær
 eiginlega ekkert meira en bara það sko*/
 html {
@@ -25,6 +25,7 @@ h1 {
     top: 0;
     z-index: 5;
     display:grid;
+    font-family: 'Readex Pro', sans-serif;
     text-align: center;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
@@ -39,33 +40,34 @@ footer ul {
     text-align: center;
     justify-content: center;
     grid-column-gap: 5%;
-    width:100%;
+    width:75%;
     margin:auto;
     list-style: none;
     grid-template-rows:auto auto auto auto;
     grid-auto-flow:column;
     font-family: 'Poppins', sans-serif;
+    padding-bottom:6%;
 }
 footer {
-    display:grid;
-    grid-template-rows: auto auto;
     justify-content: center;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgb(0, 96, 193) 80%);
     margin:auto;
     padding:0;
-    grid-gap:15%;
     padding-top:20%;
-    padding-bottom:5%;
+    padding-bottom:6%;
 }
 #articles{
     width:100%;
     padding-top: 7%;
+    font-family: 'Raleway', sans-serif;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(241,44,44,1) 0%, rgba(226,0,107,1) 50%);
 }
 #map {
     display:block;
+    width:75%;
+    margin:auto;
 }
 #beatsabercontainer div{
     grid-area: "bstext";
@@ -116,9 +118,11 @@ a:hover {
 }
 footer {
     padding-top:30%;
+    padding-bottom: 20%;
 }
 #beatsabercontainer{
     grid-template-rows: auto auto;
+    grid-template-columns: auto;
     grid-gap: 2%;
 }
 audio{
