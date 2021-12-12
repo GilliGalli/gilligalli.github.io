@@ -1,52 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap');
 html {
     width: 100%;
     margin:0;
     padding:0;
-    background-color: aqua;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(0, 255, 255) 0%, rgb(0, 255, 255) 59%, rgba(226, 0, 107) 60%);
 }
 body{
     padding:0;
     margin:0;
 }
 h1 {
+    font-family: 'Lato', sans-serif;
     text-align: center;
-    padding-top:25%;
+    padding-top: 45vh;
     font-size: 300%;
-    padding-bottom:25%;
+    padding-bottom:45vh;
 }
-footer ul{
+footer ul {
     display:grid;
     list-style: none;
     text-align: center;
     justify-content: center;
     grid-column-gap: 5%;
-    width:45%;
+    width:55%;
     margin:auto;
     list-style: none;
     grid-template-rows:auto auto auto auto;
     grid-auto-flow:column;
+    font-family: 'Poppins', sans-serif;
 }
 footer {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 96, 193) 50%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgb(0, 96, 193) 80%);
     margin:0;
     padding:0;
-    padding-top:10%;
+    padding-top:50%;
     padding-bottom:5%;
 }
+#articles{
+    width:100%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(241,44,44,1) 0%, rgba(226,0,107,1) 100%);
+}
+#beatsabercontainer {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    width:60%;
+    justify-items: center;
+    align-items: center;
+    height:auto;
+    margin:auto;
+    grid-gap:25%;
+}
+video{
+    width:200%;
+    max-height: 100%;
+}
 a {
-color:white;
-text-decoration: none;
+    color:white;
+    text-decoration: none;
 }
 a:hover {
-color:white;
-text-decoration: underline;
+    color:white;
+    text-decoration: underline;
 }
-@media screen and (max-width:54em){
-footer{
+@media screen and (max-width:48em){
+footer {
     padding-top:30%;
 }
-footer ul{
+#beatsabercontainer{
+    grid-template-columns: auto;
+    grid-gap: 2%;
+}
+footer ul {
     grid-template-rows: auto auto auto auto auto auto auto auto;
     width:75%;
 }
