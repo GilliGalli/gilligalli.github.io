@@ -79,9 +79,6 @@ footer p {
 #beatsabercontainer div{
     grid-area: "bstext";
 }
-#beatsabercontainer video{
-    grid-area: "bsvideo";
-}
 #beatsabercontainer {
     display:grid;
     grid-template-columns: auto auto;
@@ -105,8 +102,10 @@ footer p {
     margin:auto;
     grid-gap:5%;
 }
-video{
+#video{
     display:block;
+    grid-area: "bsvideo";
+    border: 1px black solid;
     width:200%;
     max-height: 100%;
 }
@@ -144,7 +143,7 @@ footer ul {
     grid-template-rows: auto auto auto auto auto auto auto auto;
     width:75%;
 }
-video{
+#video{
     width:90%;
 }
 }
