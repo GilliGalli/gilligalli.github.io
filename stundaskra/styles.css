@@ -20,7 +20,7 @@ body {
 }
 
 .dagskraColor {
-    border:rgb(0, 172, 229) 1px solid;
+    box-shadow: 3px 3px 10px black;
     border-radius: 7px;
     background: rgb(91,138,255);
     background: linear-gradient(0deg, rgba(91,138,255,1) 0%, rgba(0,189,255,1) 100%);
