@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1 id="notfound" style="display:none">Engin Dagskrá Fundin!</h1>
     <div class="dagskraGrid">
         <div id="1"></div>
         <div id="2"></div>
@@ -19,6 +20,8 @@
         <div id="8"></div>
     </div>
     <script>
+        const notfound = document.querySelector("#notfound");
+        const gridContainer = document.querySelector(".dagskraGrid");
         const timar = {
             1:"8:10 - 9:10",
             2:"9:15 - 10:15",
@@ -37,17 +40,41 @@
                 }
                 response.json().then(data => {
                     jsondata = data.results;
-                    dagskra = jsondata[new Date().getDay()]
+                    dagskra = jsondata[new Date().getDay()];
                     if(dagskra.length !== 0){
+                        if(dagskra[0].timi != 1){
+                            for(let i = 1; i < dagskra[0].timi; i++){
+                                eydaThessu = document.getElementById(i)
+                                eydaThessu.style.display = "none"
+                            }
+                        }
+                        if(dagskra[dagskra.length-1].timi != 8){
+                            for(let i = dagskra[dagskra.length-1].timi + 1; i < 9; i++){
+                                console.log(i)
+                                eydaThessu = document.getElementById(i)
+                                eydaThessu.style.display = "none"
+                            }
+                        } 
+                        if((dagskra[dagskra.length-1].timi - dagskra[0].timi) < 5) {
+                            document.body.style.overflow = "hidden";
+                        }else{
+                            document.body.style.overflow = "shown";
+                        }
+                    notfound.style.display = "none";
+                    gridContainer.style.display = "grid";
                     dagskra.forEach(timi => {
                         timinn = document.getElementById(timi.timi);
-                        timinn.classList.add("dagskraColor")
+                        timinn.classList.add("dagskraColor");
                         timinn.innerHTML = `
                                             <p>${timar[timi.timi]}</p>
                                             <h2>${timi.nafn}</h2>
                                             <h3>${timi.stofa}</h3>
                     `
-                    });}
+                    });}else {
+                        document.body.style.overflow = "hidden"
+                        notfound.style.display = "block"
+                        gridContainer.style.display = "none"
+                    }
                 })
         })
     </script>
