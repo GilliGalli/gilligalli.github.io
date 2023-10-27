@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sv g</title>
+    <style>
+        .reflect {fill:#fcfcea}
+        .silver {fill:#969696}
+        .base {fill:#41423f}
+        .butt {fill:#ffd518}
+        .fillers {
+           stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;
+        }
+        .outline {
+           fill:none;stroke:#49230f;stroke-width:2.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1
+        }
+        @keyframes throw {
+            0% {}
+            50% {transform: translate(480px, 200px) rotate(10deg);}
+            75% {transform: translate(480px, 200px) rotate(10deg);}
+            100% {transform: translate(420px, 105px) rotate(10deg) scale(2.5);}
+        }
+        @keyframes pop {
+         0% {opacity:100%}
+         62.9% {opacity: 100%;}
+         63% {
+            opacity: 0;
+         }
+         100% {opacity:0;}
+        }
+        @keyframes reversepop {
+         0% {opacity:0}
+         100% {opacity:100%;}
+        }
+        #dart {
+           animation:throw 1.5s ease forwards;
+        }svg {
+         position:absolute
+        }#btd6bloon{
+         left:0;
+         transform: translateX(50%);
+         animation: pop 0.5s linear forwards;
+        }#circlesvg {
+         fill:url("#orang");
+        }#mittstuff {
+         opacity: 0;
+         left:0;
+         transform: translateX(50%);
+         animation: reversepop 0.5s 1.2s ease forwards;
+        }text {
+         fill:black;
+         font: bold 10px "comic sans ms";
+        }
+        </style>
+</head>
+<body>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg 
+    id="mittstuff"
+width="180mm"
+height="180mm"
+viewBox="0 0 200 200"> <!-- allt #mittstuff svgið er handskrifað í vscode, hin eru gerð í inkscape -->
+<defs>
+   <radialGradient id="orang">
+      <stop offset="0%" stop-color="#ff931e"/>
+      <stop offset="100%" stop-color="#ffc400"/>
+   </radialGradient>
+</defs>
+   <circle id="circlesvg" cx="100" cy="100" r="75" />
+   <text x="60" y="150">BTD6 Klúbbur(?)</text> <!-- það stóð að þetta ætti að vera fyrir klúbb en ég veit ekki alveg hvort bloons td 6 klúbbur myndi virka sem alvöru klúbbur -->
+
+</svg>
+<svg
+   width="220mm"
+   height="110mm"
+   viewBox="0 0 650 320"
+   version="1.1"
+   id="btd6dart"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+
+  <defs
+     id="defs2" />
+  <g id="dart" style="display:inline">
+    <path
+       class="fillers butt"
+       d="m 22.265158,41.370099 c 0,0 -12.497218,7.038662 -5.243086,11.419871 7.254132,4.381209 13.50274,-7.541424 13.50274,-7.541424 0,0 4.668502,-14.364618 -3.303863,-13.359095 -7.972361,1.005522 -4.955791,9.480648 -4.955791,9.480648 z"
+       id="path5579" />
+    <path
+       class="fillers base"
+       d="m 31.08144,43.86595 c 0,0 6.19592,-8.721627 21.838189,-6.994884 15.642273,1.726744 19.323587,14.416508 18.041583,16.349842 -1.282007,1.933331 -0.853509,8.384034 -4.16574,9.983411 C 63.48324,64.803694 57.69357,71.913815 42.559165,64.803694 27.424761,57.69357 31.08144,43.86595 31.08144,43.86595 Z"
+       id="path6610"/>
+    <path
+       class="fillers silver"
+       d="m 96.673878,68.734696 c 0,0 -33.254058,-22.916405 -40.220931,-15.657433 -1.560694,1.626129 -0.978377,5.326081 2.11682,6.503351 10.162944,3.865515 38.104111,9.154082 38.104111,9.154082 z"
+       id="path7763"/>
+    <path
+       class="fillers reflect"
+       d="m 26.359114,31.882291 c 0,0 2.433196,11.101956 4.722326,11.983659 2.289132,0.881706 0.701633,-9.966211 0.238612,-10.363086 -0.463021,-0.396875 -4.960938,-1.620573 -4.960938,-1.620573 z"
+       id="path8824" />
+    <path
+       class="fillers reflect"
+       d="m 40.224064,38.610423 c 0,0 21.174936,0.225093 23.275935,11.528118 0.0501,0.26951 -3.541898,-0.470334 -3.869531,0.752409 -0.296601,1.106929 -1.33385,2.442483 33.304427,14.725716 C 95.859066,66.653619 70.961212,53.220908 70.961212,53.220908 L 68.990103,46.037499 65.352083,41.804166 57.282291,37.76927 47.095833,36.644791 Z"
+       id="path9038"/>
+    <path
+       class="fillers reflect"
+       d="m 55.618198,55.381369 c 0.0045,0.147019 -0.02624,1.105996 0.505796,2.041439 0.06431,0.15201 30.990067,9.682139 31.684599,10.012868 0.694531,0.330729 1.951302,-0.297656 1.951302,-0.297656 0,0 -24.517479,-8.350141 -34.141697,-11.756651 z"
+       id="path10160"/>
+    <path
+      class="outline"
+       d="m 70.961212,53.220908 c 0,0 22.992499,12.592692 25.138081,13.93368 1.723754,1.077346 -0.215471,2.370163 -1.65193,2.011046 -1.436463,-0.359113 -27.65189,-5.961315 -27.65189,-5.961315 0,0 -10.655945,11.386063 -26.933658,-0.718231 -20.310097,-14.601123 -6.205656,-28.09744 13.215449,-25.353551 9.193355,1.651931 17.237541,6.320431 17.883948,16.088371 z"
+       id="path1840"/>
+    <path
+      class="outline"
+       d="m 31.081441,43.865952 c 0,0 -5.368776,12.156057 -13.269316,9.139488 -7.329941,-2.905345 -0.116143,-9.481949 4.453033,-11.635341 0,0 -1.436462,-9.911586 4.093916,-9.552472 5.530377,0.359116 6.40899,4.247314 6.033138,7.254134 -0.377071,3.01657 -1.310771,4.794191 -1.310771,4.794191 z"
+       id="path4592"/>
+  </g>
+</svg>
+
+<svg
+   width="180mm"
+   height="180mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="btd6bloon"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient id="linearGradient7754">
+      <stop
+         style="stop-color:#f44e4e;"
+         offset="0"
+         id="stop7750"/>
+      <stop
+         style="stop-color:#ed1414;"
+         offset="0.49272862"
+         id="stop8206"/>
+      <stop
+         style="stop-color:#f44d4d;"
+         offset="1"
+         id="stop7752"/>
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6256">
+      <stop
+         style="stop-color:#f9bdbd;"
+         offset="0"
+         id="stop6252"/>
+      <stop
+         style="stop-color:#fac6c6;"
+         offset="1"
+         id="stop6254"/>
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5429">
+      <stop
+         style="stop-color:#fac9c9;"
+         offset="0"
+         id="stop5425"/>
+      <stop
+         style="stop-color:#fabebe;"
+         offset="1"
+         id="stop5427"/>
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient5429"
+       id="linearGradient5431"
+       x1="108.74305"
+       y1="44.018215"
+       x2="141.36604"
+       y2="90.432358"
+       gradientUnits="userSpaceOnUse"/>
+    <linearGradient
+       xlink:href="#linearGradient6256"
+       id="linearGradient6258"
+       x1="132.29707"
+       y1="104.68649"
+       x2="141.02621"
+       y2="97.430374"
+       gradientUnits="userSpaceOnUse"/>
+    <linearGradient
+       xlink:href="#linearGradient7754"
+       id="linearGradient7756"
+       x1="71.51442"
+       y1="136.48441"
+       x2="147.90085"
+       y2="54.164989"
+       gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <g>
+    <path
+       style="opacity:1;fill:#a90202;fill-opacity:1;stroke:none;stroke-width:0.272906px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 93.713193,152.67317 13.502497,2.77227 c 0,0 -0.35245,9.99827 -1.32554,12.35117 -0.9731,2.3529 -8.757837,3.95287 -10.527095,2.9176 -1.769258,-1.03529 -7.165498,-6.02342 -8.138591,-8.37632 -0.973092,-2.35289 -0.353851,-5.74107 0.707705,-6.21164 1.061553,-0.47059 5.781024,-3.45308 5.781024,-3.45308"
+       id="path4486"/>
+    <path
+       style="fill:url(#linearGradient7756);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 108.01186,155.49718 c 5.25443,-1.43871 44.36664,-18.88198 48.37001,-65.421222 4.00338,-46.539245 -36.5308,-62.552749 -54.04557,-62.052326 -17.514774,0.500422 -54.045577,9.758227 -55.797055,57.548528 -1.751476,47.7903 46.775865,67.54043 46.775865,67.54043 5.367646,0.5931 11.53784,2.67318 14.69675,2.38459 z"
+       id="path7440"/>
+    <path
+       style="fill:url(#linearGradient5431);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 107.34051,47.289878 c 0,0 13.5114,8.63228 17.89009,17.577321 4.3787,8.945044 7.38123,20.45475 7.31867,25.333865 -0.0626,4.879115 10.00845,-0.625528 10.38376,-1.751479 0.37532,-1.125947 -0.75063,-20.016877 -11.57226,-31.964452 -10.82162,-11.947575 -17.7741,-13.092345 -19.89177,-13.511395 -3.54048,-0.700597 -6.19272,3.127637 -4.12849,4.31614 z"
+       id="path4786"/>
+    <path
+       style="fill:url(#linearGradient6258);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 132.42417,101.36673 c 0,0 5.81741,-5.34826 7.63143,-4.378694 1.81403,0.969568 1.65765,1.845307 0.34404,4.159754 -1.3136,2.31446 -2.22062,4.40997 -4.0972,4.34742 -1.87658,-0.0626 -4.34742,-0.5317 -4.37869,-2.00169 -0.0313,-1.46999 0.31276,-1.8453 0.50042,-2.12679 z"
+       id="path5125"/>
+    <path
+       style="display:inline;fill:none;stroke:#790000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 93.713194,153.77606 c 0,0 -4.7629,2.60575 -6.63949,4.85765 -1.87658,2.25191 3.00254,10.50886 7.00591,11.38461 4.00338,0.87574 10.508856,0.62553 11.885026,-2.25191 1.37616,-2.87742 1.25105,-11.3846 1.25105,-11.3846 0,0 8.88249,-3.87826 12.38545,-6.50547 3.50295,-2.62722 36.5308,-26.77258 36.78101,-64.304234 C 156.63236,48.040458 125.9675,28.524001 103.08721,28.524 c -40.283967,-1e-6 -60.352544,30.93408 -55.546839,66.305913 5.368907,39.517217 46.172823,58.946147 46.172823,58.946147 z"
+       id="path2402"/>
+  </g>
+</svg>
+
+</body>
+</html>
