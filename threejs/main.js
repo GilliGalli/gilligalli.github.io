@@ -24,6 +24,7 @@ circle.castShadow = true;
 circle.position.y += 0.5;
 
 const tossiTexture = new THREE.TextureLoader().load('tossi.png')
+// það var erfiðara en ég hefði haldið að texture mappa rétt
 const coneGeo = new THREE.ConeGeometry(0.35, 1, 128);
 const coneMaterial = new THREE.MeshStandardMaterial({map:tossiTexture, shininess:0, wireframe:false});
 const cone = new THREE.Mesh(coneGeo, coneMaterial);
