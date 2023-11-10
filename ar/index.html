@@ -19,8 +19,7 @@
     <button onclick="activateXR()">Start Hello WebXR</button>
     <script type="module">
         import * as THREE from 'three';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';</script>
-        <script>
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
         async function activateXR() {
             const canvas = document.createElement('canvas');
             document.body.appendChild(canvas);
@@ -98,6 +97,7 @@
             }
         session.requestAnimationFrame(onXRFrame);
         }
+        window.activateXR = activateXR
     </script>
 </body>
 </html>
