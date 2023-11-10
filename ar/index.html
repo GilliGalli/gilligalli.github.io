@@ -20,6 +20,7 @@
     <script type="module">
         import * as THREE from 'three';
         import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+		import { XREstimatedLight } from 'three/addons/webxr/XREstimatedLight.js';
         async function activateXR() {
             const canvas = document.createElement('canvas');
             document.body.appendChild(canvas);
@@ -40,7 +41,7 @@
             const camera = new THREE.PerspectiveCamera();
             camera.matrixAutoUpdate = false;
 
-            const session = await navigator.xr.requestSession("immersive-ar", {requiredFeatures: ['hit-test']});
+            const session = await navigator.xr.requestSession("immersive-ar", {requiredFeatures: ['hit-test']}, {optionalFeatures: ['light-estimation']});
             session.updateRenderState({
                 baseLayer: new XRWebGLLayer(session, gl)
             });
@@ -50,6 +51,34 @@
             const viewerSpace = await session.requestReferenceSpace('viewer');
             // Perform hit testing using the viewer as origin.
             const hitTestSource = await session.requestHitTestSource({ space: viewerSpace });
+
+            const xrLight = new XREstimatedLight( renderer );
+
+            xrLight.addEventListener( 'estimationstart', () => {
+
+                // Swap the default light out for the estimated one one we start getting some estimated values.
+                scene.add( xrLight );
+                scene.remove( defaultLight );
+
+                // The estimated lighting also provides an environment cubemap, which we can apply here.
+                if ( xrLight.environment ) {
+
+                    scene.environment = xrLight.environment;
+
+                }
+
+            } );
+
+            xrLight.addEventListener( 'estimationend', () => {
+
+                // Swap the lights back when we stop receiving estimated values.
+                scene.add( defaultLight );
+                scene.remove( xrLight );
+
+                // Revert back to the default environment.
+                scene.environment = defaultEnvironment;
+
+            } );
 
             const loader = new GLTFLoader();
             let reticle;
