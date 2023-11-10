@@ -51,7 +51,7 @@
             // Perform hit testing using the viewer as origin.
             const hitTestSource = await session.requestHitTestSource({ space: viewerSpace });
 
-            const loader = new THREE.GLTFLoader();
+            const loader = new GLTFLoader();
             let reticle;
             loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function(gltf) {
                 reticle = gltf.scene;
