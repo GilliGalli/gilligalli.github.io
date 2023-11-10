@@ -19,8 +19,9 @@
     <button onclick="activateXR()">Start Hello WebXR</button>
     <script type="module">
         import * as THREE from 'three';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-        export async function activateXR() {
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';</script>
+        <script>
+        async function activateXR() {
             const canvas = document.createElement('canvas');
             document.body.appendChild(canvas);
             const gl = canvas.getContext("webgl", {xrCompatible:true});
