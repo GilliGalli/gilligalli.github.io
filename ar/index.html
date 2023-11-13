@@ -29,6 +29,8 @@
 
             const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
             scene.add(directionalLight);
+            const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+            scene.add( light );
 
             const renderer = new THREE.WebGLRenderer({
                 alpha:true,
@@ -87,14 +89,14 @@
                 reticle.visible = false;
                 scene.add(reticle);
             })
-            let flower;
+            let emil;
             loader.load("https://gilligalli.github.io/ar/emil.gltf", function(gltf) {
-                flower = gltf.scene;
+                emil = gltf.scene;
             });
 
             session.addEventListener("select", (event) => {
-                if(flower) {
-                    const clone = flower.clone();
+                if(emil) {
+                    const clone = emil.clone();
                     clone.position.copy(reticle.position);
                     scene.add(clone)
                 }
